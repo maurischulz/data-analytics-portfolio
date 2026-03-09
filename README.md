@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # BI & Data Analytics Portfolio
 
 Portfólio com 4 projetos de Business Intelligence aplicados a áreas críticas do negócio:
@@ -49,4 +48,3 @@ Portfólio com 4 projetos de Business Intelligence aplicados a áreas críticas 
 =======
 # data-analytics-portfolio
 Data Analytics Engineering Portfolio Dados, organizados para decisões claras e estratégicas.
->>>>>>> 60eb77e88afad0031e7e62fb2ec471e21bb2e190
