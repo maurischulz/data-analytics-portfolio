@@ -62,13 +62,18 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-sans;
     font-family: var(--font-display);
   }
 
-  html {
-    scroll-behavior: smooth;
+  /* melhora o posicionamento quando navega por âncoras */
+  section[id] {
+    scroll-margin-top: 96px;
   }
 }
 
@@ -94,7 +99,7 @@
   }
 
   .grid-bg {
-    background-image: 
+    background-image:
       linear-gradient(hsl(var(--primary) / 0.03) 1px, transparent 1px),
       linear-gradient(90deg, hsl(var(--primary) / 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
