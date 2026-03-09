@@ -33,7 +33,7 @@ const HeroSection = () => {
               Business Intelligence • Data Analytics • Data Integration
             </p>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-[0.95] tracking-tight">
-              Maurício <span className="gradient-text">Schulz</span>
+              Mauri <span className="gradient-text">Schulz</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-5 leading-relaxed">
               Portfólio profissional com projetos em Power BI, SQL, Spark / PySpark, ETL / ELT,
@@ -64,7 +64,7 @@ const HeroSection = () => {
               size="lg"
               variant="outline"
               className="border-primary/30 text-foreground hover:bg-primary/10 gap-2 px-8"
-              onClick={() => window.open("https://github.com/maurischulz/bi-data-portfolio", "_blank")}
+              onClick={() => window.open("https://github.com/maurischulz/data-analytics-portfolio", "_blank")}
             >
               <Github size={18} />
               GitHub
@@ -108,7 +108,7 @@ const HeroSection = () => {
             <a href="https://www.linkedin.com/in/mauri-schulz-hexdata" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Linkedin size={22} />
             </a>
-            <a href="https://github.com/maurischulz/bi-data-portfolio" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="https://github.com/maurischulz/data-analytics-portfolio" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Github size={22} />
             </a>
             <a href="#about" className="inline-block animate-float text-muted-foreground hover:text-primary transition-colors">
