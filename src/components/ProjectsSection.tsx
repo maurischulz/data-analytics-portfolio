@@ -52,9 +52,33 @@ const projects = [
     },
     comingSoon: true,
   },
+  {
+    title: "E-commerce Analytics Pipeline",
+    desc: "Pipeline ELT completo com Airbyte, dbt e DuckDB consumindo 100k+ transações do dataset Olist (Kaggle). Star Schema com 5 dimensões e análises de RFM, churn e sazonalidade.",
+    tech: ["Airbyte", "dbt", "DuckDB", "SQL", "Star Schema"],
+    category: "Engenharia de Dados",
+    caseStudy: {
+      problem: "Necessidade de pipeline ETL robusto para dados reais de e-commerce com transformações complexas.",
+      stack: "Airbyte (ELT) + PostgreSQL (staging) + dbt (transformações) + DuckDB (warehouse) + SQL analítico.",
+      impact: "Warehouse pronto para BI com modelos versionados, testes de qualidade e documentação automática via dbt.",
+    },
+    link: "https://github.com/maurischulz/ecommerce-analytics-pipeline",
+  },
+  {
+    title: "IBGE PIB Analytics",
+    desc: "Pipeline de dados econômicos públicos do Brasil — PIB regional, inflação, vendas e faturamento. Fetch da API IBGE, transformação com dbt e análises regionais.",
+    tech: ["API REST", "Python", "dbt", "DuckDB", "SQL"],
+    category: "Engenharia de Dados",
+    caseStudy: {
+      problem: "Consolidar dados econômicos regionais do IBGE para análise de tendências e correlações.",
+      stack: "Python (fetch API IBGE) + PostgreSQL + dbt + DuckDB. Dados públicos, históricos de 2012 até hoje.",
+      impact: "Dashboard de indicadores econômicos regionais com ranking de crescimento PIB, inflação acumulada e análises de riscos.",
+    },
+    link: "https://github.com/maurischulz/ibge-pib-analytics",
+  },
 ];
 
-const categories = ["Todos", "Comercial", "Logística", "Produção", "Financeiro"];
+const categories = ["Todos", "Comercial", "Logística", "Produção", "Financeiro", "Engenharia de Dados"];
 
 const ProjectsSection = () => {
   const ref = useRef(null);
@@ -151,7 +175,7 @@ const ProjectsSection = () => {
                   onClick={() => window.open(p.link, "_blank")}
                 >
                   <ExternalLink size={14} />
-                  Abrir relatório
+                  {p.category === "Engenharia de Dados" ? "Ver repositório" : "Abrir relatório"}
                 </Button>
               )}
             </motion.div>
