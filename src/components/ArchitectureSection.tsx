@@ -1,6 +1,29 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Server, GitBranch, ShieldCheck, Workflow, MonitorDot, Boxes } from "lucide-react";
+import { Server, GitBranch, ShieldCheck, Workflow, MonitorDot, Boxes, ArrowRight } from "lucide-react";
+
+const pipeline = [
+  {
+    title: "Fontes Corporativas",
+    subtitle: "ERP, planilhas, APIs e bancos SQL",
+    detail: "Coleta e integração de dados operacionais e gerenciais com regras de negócio.",
+  },
+  {
+    title: "ETL / ELT",
+    subtitle: "SQL + Spark/PySpark",
+    detail: "Tratamento, padronização e validação para garantir qualidade e rastreabilidade.",
+  },
+  {
+    title: "Camada Analítica",
+    subtitle: "Modelagem Dimensional / Star Schema",
+    detail: "Organização de fatos, dimensões, métricas e calendário analítico para BI.",
+  },
+  {
+    title: "Power BI",
+    subtitle: "DAX + KPIs executivos",
+    detail: "Dashboards executivos e operacionais para tomada de decisão orientada por dados.",
+  },
+];
 
 const solutions = [
   {
@@ -55,6 +78,31 @@ const ArchitectureSection = () => {
             Esta seção posiciona o portfólio além da camada visual, destacando frentes de integração,
             modelagem, qualidade e arquitetura analítica que reforçam maturidade em BI e dados.
           </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mb-12 rounded-2xl border border-primary/20 bg-card/60 p-5 md:p-6"
+        >
+          <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-4">Diagrama de Arquitetura de Dados</p>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] gap-3 items-stretch">
+            {pipeline.map((stage, i) => (
+              <div key={stage.title} className="contents">
+                <div className="rounded-xl border border-border bg-secondary/40 p-4">
+                  <h3 className="text-sm font-semibold text-foreground mb-1">{stage.title}</h3>
+                  <p className="text-xs text-primary mb-2">{stage.subtitle}</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{stage.detail}</p>
+                </div>
+                {i < pipeline.length - 1 && (
+                  <div className="hidden md:flex items-center justify-center text-primary/70">
+                    <ArrowRight size={18} />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -9,9 +9,15 @@ const ContactSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [sent, setSent] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const subject = encodeURIComponent(`Contato via portfólio - ${name}`);
+    const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`);
+    window.location.href = `mailto:maurischulz@gmail.com?subject=${subject}&body=${body}`;
     setSent(true);
     setTimeout(() => setSent(false), 3000);
   };
@@ -84,9 +90,29 @@ const ContactSection = () => {
             onSubmit={handleSubmit}
             className="space-y-4"
           >
-            <Input placeholder="Seu nome" className="bg-card border-border" required />
-            <Input type="email" placeholder="Seu e-mail" className="bg-card border-border" required />
-            <Textarea placeholder="Sua mensagem" rows={5} className="bg-card border-border resize-none" required />
+            <Input
+              placeholder="Seu nome"
+              className="bg-card border-border"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <Input
+              type="email"
+              placeholder="Seu e-mail"
+              className="bg-card border-border"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <Textarea
+              placeholder="Sua mensagem"
+              rows={5}
+              className="bg-card border-border resize-none"
+              required
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
             <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 w-full">
               <Send size={16} />
               {sent ? "Mensagem enviada!" : "Enviar mensagem"}

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, FolderOpen, Github, Linkedin } from "lucide-react";
+import { ArrowDown, Github, Linkedin, BadgeCheck, MessageCircle, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -29,6 +29,12 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            <div className="mb-6 flex justify-center">
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold tracking-wide text-primary">
+                <BadgeCheck size={14} />
+                Disponível • Pronto para novos desafios
+              </span>
+            </div>
             <p className="text-primary font-mono text-sm tracking-[0.28em] uppercase mb-5">
               Business Intelligence • Data Analytics • Data Integration
             </p>
@@ -50,34 +56,27 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.25 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+            className="flex flex-col items-center gap-6 mb-12"
           >
-            <Button
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 px-8"
-              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-            >
-              <FolderOpen size={18} />
-              Ver projetos
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary/30 text-foreground hover:bg-primary/10 gap-2 px-8"
-              onClick={() => window.open("https://github.com/maurischulz/data-analytics-portfolio", "_blank")}
-            >
-              <Github size={18} />
-              GitHub
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-border text-foreground hover:bg-secondary gap-2 px-8"
-              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-            >
-              <Mail size={18} />
-              Contato
-            </Button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-2xl">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-primary to-accent text-primary-foreground hover:opacity-90 gap-2 px-10 shadow-xl w-full sm:w-auto"
+                onClick={() => window.open("https://wa.me/5547997886929?text=Olá! Vi seu portfólio e gostaria de conversar sobre oportunidades em BI e Analytics.", "_blank")}
+              >
+                <MessageCircle size={18} />
+                Conversar no WhatsApp
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary/40 text-foreground hover:bg-primary/10 gap-2 px-10 w-full sm:w-auto"
+                onClick={() => window.open("#", "_blank")}
+              >
+                <Download size={18} />
+                Baixar Currículo
+              </Button>
+            </div>
           </motion.div>
 
           <motion.div
