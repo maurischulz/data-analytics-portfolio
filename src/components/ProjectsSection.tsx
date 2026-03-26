@@ -53,16 +53,16 @@ const projects = [
     comingSoon: true,
   },
   {
-    title: "E-commerce Analytics Pipeline",
-    desc: "Pipeline ELT completo com Airbyte, dbt e DuckDB consumindo 100k+ transações do dataset Olist (Kaggle). Star Schema com 5 dimensões e análises de RFM, churn e sazonalidade.",
-    tech: ["Airbyte", "dbt", "DuckDB", "SQL", "Star Schema"],
+    title: "Olist Lakehouse Platform",
+    desc: "Plataforma de dados lakehouse completa, rodando 100% local via Docker, com orquestração Airflow e processamento distribuído Spark. Pipeline Bronze → Silver → Gold com camadas de qualidade e monitoramento.",
+    tech: ["Airflow", "Spark", "PostgreSQL", "Airbyte", "Docker"],
     category: "Engenharia de Dados",
     caseStudy: {
-      problem: "Necessidade de pipeline ETL robusto para dados reais de e-commerce com transformações complexas.",
-      stack: "Airbyte (ELT) + PostgreSQL (staging) + dbt (transformações) + DuckDB (warehouse) + SQL analítico.",
-      impact: "Warehouse pronto para BI com modelos versionados, testes de qualidade e documentação automática via dbt.",
+      problem: "Construir uma arquitetura lakehouse moderna para dados reais de e-commerce com esteira ponta a ponta em ambiente local.",
+      stack: "PostgreSQL + Airbyte + Apache Spark + Apache Airflow + Python + Docker (WSL2).",
+      impact: "Pipeline em 3 camadas (Bronze, Silver e Gold) com processamento distribuído, orquestração de DAGs e validações de qualidade automatizadas.",
     },
-    link: "https://github.com/maurischulz/ecommerce-analytics-pipeline",
+    link: "https://github.com/maurischulz/olist-lakehouse-platform.git",
   },
   {
     title: "IBGE PIB Analytics",
