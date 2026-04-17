@@ -71,7 +71,7 @@ const HeroSection = () => {
                 size="lg"
                 variant="outline"
                 className="border-primary/40 text-foreground hover:bg-primary/10 gap-2 px-10 w-full sm:w-auto"
-                onClick={() => window.open("/assets/mauri_schulz_curriculo.pdf", "_blank")}
+                onClick={() => window.open("assets/mauri_schulz_curriculo.pdf", "_blank")}
               >
                 <Download size={18} />
                 Baixar Currículo
