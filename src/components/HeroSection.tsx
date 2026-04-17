@@ -68,13 +68,15 @@ const HeroSection = () => {
                 Conversar no WhatsApp
               </Button>
               <Button
+                asChild
                 size="lg"
                 variant="outline"
                 className="border-primary/40 text-foreground hover:bg-primary/10 gap-2 px-10 w-full sm:w-auto"
-                onClick={() => window.open("mauri_schulz_curriculo.pdf", "_blank")}
               >
-                <Download size={18} />
-                Baixar Currículo
+                <a href="/mauri_schulz_curriculo.pdf" download>
+                  <Download size={18} />
+                  Baixar Currículo
+                </a>
               </Button>
             </div>
           </motion.div>
