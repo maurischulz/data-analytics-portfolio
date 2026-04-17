@@ -73,7 +73,7 @@ const HeroSection = () => {
                 variant="outline"
                 className="border-primary/40 text-foreground hover:bg-primary/10 gap-2 px-10 w-full sm:w-auto"
               >
-                <a href="/mauri_schulz_curriculo.pdf" download>
+                <a href={`${import.meta.env.BASE_URL}mauri_schulz_curriculo.pdf`} download>
                   <Download size={18} />
                   Baixar Currículo
                 </a>
