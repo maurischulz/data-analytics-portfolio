@@ -14,7 +14,10 @@ const projects = [
       stack: "Power BI + SQL + DAX + modelagem dimensional (Star Schema).",
       impact: "Leitura executiva mais rápida e priorização comercial orientada por KPIs.",
     },
-    link: "https://app.powerbi.com/view?r=eyJrIjoiMTE2NDM1ZjUtYjY0MS00NDVlLWI4MWItZDY3MWE3ODRmNGJmIiwidCI6Ijk5MTIyNzllLWMyNzQtNGQ3NS04YWUwLTM2NWY0YWM3MDFjNSJ9",
+    links: [
+      { url: "https://app.powerbi.com/view?r=eyJrIjoiMTE2NDM1ZjUtYjY0MS00NDVlLWI4MWItZDY3MWE3ODRmNGJmIiwidCI6Ijk5MTIyNzllLWMyNzQtNGQ3NS04YWUwLTM2NWY0YWM3MDFjNSJ9", label: "Visão 1" },
+      { url: "https://app.powerbi.com/reportEmbed?reportId=e292314e-ac20-4adc-8c00-fc9353a769a5&autoAuth=true&ctid=9912279e-c274-4d75-8ae0-365f4ac701c5", label: "Visão 2" },
+    ],
   },
   {
     title: "Dashboard Logístico",
@@ -167,6 +170,21 @@ const ProjectsSection = () => {
                   <Clock3 size={14} />
                   Link em breve
                 </Button>
+              ) : p.links ? (
+                <div className="flex flex-wrap gap-2">
+                  {p.links.map((linkItem, idx) => (
+                    <Button
+                      key={idx}
+                      variant="outline"
+                      size="sm"
+                      className="border-primary/30 text-foreground hover:bg-primary/10 gap-2"
+                      onClick={() => window.open(linkItem.url, "_blank")}
+                    >
+                      <ExternalLink size={14} />
+                      {linkItem.label}
+                    </Button>
+                  ))}
+                </div>
               ) : (
                 <Button
                   variant="outline"
