@@ -16,7 +16,7 @@ const projects = [
     },
     links: [
       { url: "https://app.powerbi.com/view?r=eyJrIjoiMTE2NDM1ZjUtYjY0MS00NDVlLWI4MWItZDY3MWE3ODRmNGJmIiwidCI6Ijk5MTIyNzllLWMyNzQtNGQ3NS04YWUwLTM2NWY0YWM3MDFjNSJ9", label: "Visão 1" },
-      { url: "https://app.powerbi.com/reportEmbed?reportId=e292314e-ac20-4adc-8c00-fc9353a769a5&autoAuth=true&ctid=9912279e-c274-4d75-8ae0-365f4ac701c5", label: "Visão 2" },
+      { url: "https://app.powerbi.com/view?r=eyJrIjoiNGVhNjc2ZDItZGZiMC00MDk4LTk1NjMtYmEwM2VkNjNiMTg1IiwidCI6Ijk5MTIyNzllLWMyNzQtNGQ3NS04YWUwLTM2NWY0YWM3MDFjNSJ9", label: "Visão 2" },
     ],
   },
   {
@@ -46,14 +46,14 @@ const projects = [
   {
     title: "DRE Analítico",
     desc: "Projeto financeiro em fase de validação com DRE gerencial, visão executiva de resultado e estrutura analítica para custos, despesas e margens.",
-    tech: ["Financeiro", "DRE", "Margens", "Em breve"],
+    tech: ["Financeiro", "DRE", "Margens", "Power BI"],
     category: "Financeiro",
     caseStudy: {
       problem: "Ausência de visão padronizada para análise de resultado e composição de margens.",
       stack: "Power BI + SQL + DAX + estrutura financeira para DRE gerencial.",
       impact: "Projeto em validação para fortalecer leitura executiva de resultado financeiro.",
     },
-    comingSoon: true,
+    link: "https://app.powerbi.com/view?r=eyJrIjoiMGNiMmM3YzgtZjBmYy00YWFkLWI5YjQtNzZjODQ5MzI0ZTA4IiwidCI6Ijk5MTIyNzllLWMyNzQtNGQ3NS04YWUwLTM2NWY0YWM3MDFjNSJ9",
   },
   {
     title: "Olist Lakehouse Platform",
